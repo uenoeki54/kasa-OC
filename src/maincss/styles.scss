@@ -64,33 +64,6 @@ header {
   background-image: url('../assets/banner-about.png');
 }
 
-.collapse {
-  display: flex;
-  justify-content: space-between !important;
-  align-items: center;
-  font-family: Montserrat;
-  background-color: $main-color;
-  width: 1023px;
-  height: 52px;
-  border-radius: 5px;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 34.22px;
-
-  h2 {
-    display: block;
-  }
-  i {
-    display: block;
-    height: 13.71px;
-    width: 30px;
-  }
-}
-
 .conteneur {
   width: 100%;
   display: flex;
