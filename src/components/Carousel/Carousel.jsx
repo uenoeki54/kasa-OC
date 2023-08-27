@@ -1,12 +1,56 @@
 import './carousel.css';
-import essaicarous from '../../assets/banner-about.png';
-function Carousel() {
+import React, { useState } from 'react';
+
+function Carousel({ pictureList }) {
+  console.log(pictureList);
+  const [activePic, setActivePic] = useState(0);
+  const [animState, setAnimState] = useState(false);
+  console.log(pictureList[0]);
+
   return (
     <div className="carousel">
-      <img className="banner-img" src={essaicarous} alt="title"></img>
-      <p>4/5</p>
-      <i className="fa-solid fa-chevron-left"></i>
-      <i className="fa-solid fa-chevron-right"></i>
+      {pictureList.length > 1 && (
+        <i
+          onClick={() => {
+            activePic === 0
+              ? setActivePic(pictureList.length - 1)
+              : setActivePic(activePic - 1);
+            setAnimState(true);
+          }}
+          className={
+            animState
+              ? 'fade fa-solid fa-chevron-left'
+              : 'fa-solid fa-chevron-left'
+          }
+        ></i>
+      )}
+      {pictureList.length > 1 && (
+        <i
+          onClick={() => {
+            activePic < pictureList.length - 1
+              ? setActivePic(activePic + 1)
+              : setActivePic(0);
+            setAnimState(true);
+          }}
+          className={
+            animState
+              ? 'fade fa-solid fa-chevron-right'
+              : 'fa-solid fa-chevron-right'
+          }
+          onAnimationEnd={() => setAnimState(false)}
+        ></i>
+      )}
+      <img
+        className="banner-img"
+        src={pictureList[activePic]}
+        alt="title"
+      ></img>
+
+      {pictureList.length > 1 && (
+        <p>
+          {activePic + 1}/{pictureList.length}
+        </p>
+      )}
     </div>
   );
 }

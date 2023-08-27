@@ -6,12 +6,10 @@ function Fiche() {
   const { logementId } = useParams();
   let logement = logements.filter((logements) => logements.id === logementId);
 
-  console.log(logement);
-  console.log(logement[0].title);
   return (
     <div>
       <div>
-        <Carousel />;
+        <Carousel pictureList={logement[0].pictures} />;
       </div>
       ;Voici une fiche du projet {logement[0].title}
     </div>
