@@ -2,10 +2,8 @@ import './carousel.css';
 import React, { useState } from 'react';
 
 function Carousel({ pictureList }) {
-  console.log(pictureList);
   const [activePic, setActivePic] = useState(0);
   const [animState, setAnimState] = useState(false);
-  console.log(pictureList[0]);
 
   return (
     <div className="carousel">
