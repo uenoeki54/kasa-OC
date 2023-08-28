@@ -13,8 +13,8 @@ function Fiche() {
       <div>
         <Carousel pictureList={logement[0].pictures} />
       </div>
-      <div className="lodging-head">
-        <div className="lodging-head_left">
+      <div className="lodging">
+        <div className="lodging_left">
           <h1>{logement[0].title}</h1>
           <h2>{logement[0].location}</h2>
           <ul>
@@ -24,15 +24,15 @@ function Fiche() {
           </ul>
         </div>
 
-        <div className=" lodging-head_right">
-          <div className="lodging-head_right_host">
+        <div className=" lodging_right">
+          <div className="lodging_right_host">
             <div className="name">
               <h2>{logement[0].host.name} </h2>
             </div>
 
             <img className="round" src={logement[0].host.picture}></img>
           </div>
-          <div className="lodging-head_right_stars">
+          <div className="lodging_right_stars">
             {range.map((rangeElem) =>
               stars >= rangeElem ? (
                 <i

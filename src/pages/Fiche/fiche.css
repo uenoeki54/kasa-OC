@@ -4,31 +4,31 @@
   font-family: Montserrat;
 }
 
-.lodging-head {
+.lodging {
   display: flex;
   justify-content: space-between;
   align-items: start;
   margin-top: 40px;
 }
-.lodging-head_left {
+.lodging_left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.lodging-head_left h1 {
+.lodging_left h1 {
   color: #ff6060;
   font-size: 36px;
   line-height: 51.34px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.lodging-head_left h2 {
+.lodging_left h2 {
   color: #ff6060;
   font-size: 18px;
   line-height: 25.67px;
   margin-top: 0px;
 }
-.lodging-head_left ul {
+.lodging_left ul {
   display: flex;
   list-style-type: none;
   color: white;
@@ -37,7 +37,7 @@
   padding-left: 0px;
   gap: 10px;
 }
-.lodging-head_left ul li {
+.lodging_left ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,46 +46,46 @@
   width: 115px;
   height: 25px;
 }
-.lodging-head_right {
+.lodging_right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
-.lodging-head_right_host {
+.lodging_right_host {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   width: 200px;
 }
-.lodging-head_right_host .name {
+.lodging_right_host .name {
   width: 100px;
   white-space: normal;
   text-align: right;
   padding-right: 13px;
   margin: 0px;
 }
-.lodging-head_right_host h2 {
+.lodging_right_host h2 {
   margin: 0px;
   color: #ff6060;
   font-size: 18px;
   line-height: 25.67px;
   margin-top: 0px;
 }
-.lodging-head_right_stars {
+.lodging_right_stars {
   display: flex;
   flex-direction: row;
   gap: 14px;
   margin-top: 30px;
 }
-.lodging-head_right_stars i {
+.lodging_right_stars i {
   font-size: 23px;
 }
-.lodging-head_right_stars .full-star {
+.lodging_right_stars .full-star {
   color: #ff6060;
 }
-.lodging-head_right_stars .empty-star {
+.lodging_right_stars .empty-star {
   color: #e3e3e3;
 }
 
