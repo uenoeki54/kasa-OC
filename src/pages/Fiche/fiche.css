@@ -89,6 +89,16 @@
   color: #e3e3e3;
 }
 
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.details .small {
+  width: 582px;
+}
+
 .round {
   width: 64px;
   height: 64px;

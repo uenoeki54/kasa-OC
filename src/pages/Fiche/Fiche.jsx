@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import logements from '../../assets/back.json';
 import Carousel from '../../components/Carousel/Carousel';
+import Collapse from '../../components/Collapse/Collapse';
 import './fiche.css';
 
 function Fiche() {
@@ -48,6 +49,20 @@ function Fiche() {
             )}
           </div>
         </div>
+      </div>
+      <div className="details">
+        <Collapse
+          title="Description"
+          text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
+ régulièrement vérifiées par nos équipes."
+          size="small"
+        />
+        <Collapse
+          title="Équipements"
+          text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
+ régulièrement vérifiées par nos équipes."
+          size="small"
+        />
       </div>
     </div>
   );

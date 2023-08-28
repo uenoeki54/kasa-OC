@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useRef } from 'react';
 import './collapse.css';
-function Collapse({ title, text }) {
+function Collapse({ title, text, size }) {
   const [open, setOPen] = useState(false);
   const toggle = () => {
     setOPen(!open);
   };
   const contentRef = useRef();
   return (
-    <div className="conteneur">
-      <div className="collapse">
+    <div className="conteneur-collapse">
+      <div className={'collapse ' + size}>
         <h2>{title}</h2>
         <i
           className={
@@ -27,7 +27,7 @@ function Collapse({ title, text }) {
             ? { height: contentRef.current.scrollHeight + 'px' }
             : { height: '0px' }
         }
-        className="content"
+        className={'content ' + size}
       >
         <div className="description">{text}</div>
       </div>
