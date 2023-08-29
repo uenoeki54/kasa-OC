@@ -50,6 +50,12 @@ header a:hover {
   align-items: center;
   justify-content: center;
 }
+.banner h1 {
+  color: white;
+  font-family: Montserrat;
+  font-size: 48px;
+  line-height: 68.45px;
+}
 
 .banner-home {
   background-image: url("../assets/banner-home.png");

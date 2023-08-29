@@ -3,12 +3,18 @@ import logements from '../../assets/back.json';
 import Carousel from '../../components/Carousel/Carousel';
 import Collapse from '../../components/Collapse/Collapse';
 import './fiche.css';
+import { Navigate } from 'react-router-dom';
 
 function Fiche() {
   const { logementId } = useParams();
   let logement = logements.filter((logements) => logements.id === logementId);
+
+  if (logement[0] === undefined) {
+    return <Navigate to="/error" replace={true} />;
+  }
   let stars = parseInt(logement[0].rating);
   const range = [1, 2, 3, 4, 5];
+
   return (
     <div>
       <div>
@@ -31,7 +37,11 @@ function Fiche() {
               <h2>{logement[0].host.name} </h2>
             </div>
 
-            <img className="round" src={logement[0].host.picture}></img>
+            <img
+              className="round"
+              src={logement[0].host.picture}
+              alt={logement[0].host.name}
+            ></img>
           </div>
           <div className="lodging_right_stars">
             {range.map((rangeElem) =>
