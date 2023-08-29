@@ -53,14 +53,16 @@ function Fiche() {
       <div className="details">
         <Collapse
           title="Description"
-          text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
- régulièrement vérifiées par nos équipes."
+          text="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à une station de la gare de l'est (7 minutes à pied). "
           size="small"
         />
         <Collapse
           title="Équipements"
-          text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
- régulièrement vérifiées par nos équipes."
+          text=<ul>
+            {logement[0].equipments.map((equipment) => (
+              <li key={equipment}>{equipment}</li>
+            ))}
+          </ul>
           size="small"
         />
       </div>

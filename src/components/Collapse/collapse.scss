@@ -3,9 +3,6 @@ $main-color: #ff6060;
   box-sizing: border-box;
 }
 
-.conteneur-collapse {
-}
-
 .collapse {
   display: flex;
   justify-content: space-between !important;
@@ -23,7 +20,7 @@ $main-color: #ff6060;
   line-height: 34.22px;
   margin-left: auto;
   margin-right: auto;
-
+  z-index: 2;
   h2 {
     display: block;
   }
@@ -45,19 +42,27 @@ $main-color: #ff6060;
 .content {
   height: 0px;
   width: 1023px;
-  border-radius: 5px;
+  border-radius: 0px 0px 10px 10px;
   box-sizing: border-box;
   background-color: #f6f6f6;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -10px;
+  z-index: -1;
   transition: height ease 0.4s;
+  position: relative;
 
   .description {
-    padding: 15px;
+    padding: 30px 15px 15px 15px;
     font-family: Montserrat;
     font-weight: 20px;
     color: $main-color;
     line-height: 20 px;
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      margin: 0px;
+    }
   }
 }
