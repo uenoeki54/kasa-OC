@@ -12,6 +12,15 @@
   padding: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+  @media (max-width: 470px) {
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 30px auto 20px auto;
+    gap: 25px;
+  }
 
   .thumbnail {
     position: relative;
@@ -19,12 +28,22 @@
     height: 340px;
     border-radius: 20px;
     overflow: hidden;
+    @media (max-width: 470px) {
+      width: 335px;
+      height: 255px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 10px;
+    }
   }
 
   .thumb-image {
     height: 100%;
     display: block;
     border-radius: 20px;
+    @media (max-width: 470px) {
+      border-radius: 10px;
+    }
   }
 
   .thumb-text {
@@ -37,6 +56,9 @@
     left: 20px;
     line-height: 25.67px;
     z-index: 2;
+    @media (max-width: 470px) {
+      top: 180px;
+    }
   }
   .thumbnail::before {
     content: '';

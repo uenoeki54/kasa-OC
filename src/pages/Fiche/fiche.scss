@@ -43,8 +43,10 @@ $main-color: #ff6060;
         align-items: center;
         background-color: $main-color;
         border-radius: 10px;
-        width: 115px;
+        min-width: 115px;
         height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }

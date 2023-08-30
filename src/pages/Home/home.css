@@ -13,6 +13,17 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+@media (max-width: 470px) {
+  .greybox {
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 30px auto 20px auto;
+    gap: 25px;
+  }
+}
 .greybox .thumbnail {
   position: relative;
   width: 340px;
@@ -20,10 +31,24 @@
   border-radius: 20px;
   overflow: hidden;
 }
+@media (max-width: 470px) {
+  .greybox .thumbnail {
+    width: 335px;
+    height: 255px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+  }
+}
 .greybox .thumb-image {
   height: 100%;
   display: block;
   border-radius: 20px;
+}
+@media (max-width: 470px) {
+  .greybox .thumb-image {
+    border-radius: 10px;
+  }
 }
 .greybox .thumb-text {
   color: white;
@@ -35,6 +60,11 @@
   left: 20px;
   line-height: 25.67px;
   z-index: 2;
+}
+@media (max-width: 470px) {
+  .greybox .thumb-text {
+    top: 180px;
+  }
 }
 .greybox .thumbnail::before {
   content: "";
