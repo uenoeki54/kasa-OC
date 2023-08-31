@@ -4,22 +4,49 @@ $main-color: #ff6060;
   box-sizing: border-box;
   font-family: Montserrat;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+  height: 500px;
+}
+.conteneur {
+  @media (max-width: 470px) {
+    padding-bottom: 0px;
+    height: fit-content;
+  }
+}
 
 .lodging {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 40px;
+  @media (max-width: 470px) {
+    flex-direction: column;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
   &_left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: 470px) {
+      width: 335px;
+    }
     h1 {
       color: $main-color;
       font-size: 36px;
       line-height: 51.34px;
       margin-top: 0px;
       margin-bottom: 0px;
+      @media (max-width: 470px) {
+        font-size: 18px;
+        line-height: 25.67px;
+      }
     }
 
     h2 {
@@ -27,6 +54,12 @@ $main-color: #ff6060;
       font-size: 18px;
       line-height: 25.67px;
       margin-top: 0px;
+      @media (max-width: 470px) {
+        font-size: 14px;
+        line-height: 19.96px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
     }
 
     ul {
@@ -37,6 +70,10 @@ $main-color: #ff6060;
       line-height: 19px;
       padding-left: 0px;
       gap: 10px;
+      @media (max-width: 470px) {
+        font-size: 10px;
+        line-height: 14.26px;
+      }
       li {
         display: flex;
         justify-content: center;
@@ -47,6 +84,10 @@ $main-color: #ff6060;
         height: 25px;
         padding-left: 10px;
         padding-right: 10px;
+        @media (max-width: 470px) {
+          min-width: 84px;
+          height: 18px;
+        }
       }
     }
   }
@@ -55,25 +96,43 @@ $main-color: #ff6060;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    @media (max-width: 470px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      width: 335px;
+    }
     &_host {
       display: flex;
       flex-direction: row;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
       width: 200px;
+      @media (max-width: 470px) {
+        width: 131px;
+        margin-right: 0px;
+      }
       .name {
         width: 100px;
         white-space: normal;
         text-align: right;
         padding-right: 13px;
         margin: 0px;
-      }
-      h2 {
-        margin: 0px;
-        color: $main-color;
-        font-size: 18px;
-        line-height: 25.67px;
-        margin-top: 0px;
+        @media (max-width: 470px) {
+          width: 77px;
+        }
+
+        h2 {
+          margin: 0px;
+          color: $main-color;
+          font-size: 18px;
+          line-height: 25.67px;
+          margin-top: 0px;
+          @media (max-width: 470px) {
+            font-size: 12px;
+            line-height: 17.11px;
+          }
+        }
       }
     }
     &_stars {
@@ -81,8 +140,16 @@ $main-color: #ff6060;
       flex-direction: row;
       gap: 14px;
       margin-top: 30px;
+      @media (max-width: 470px) {
+        gap: 5px;
+        align-items: center;
+        margin-top: 0px;
+      }
       i {
         font-size: 23px;
+        @media (max-width: 470px) {
+          font-size: 12px;
+        }
       }
       .full-star {
         color: $main-color;
@@ -98,12 +165,45 @@ $main-color: #ff6060;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 48px;
+  @media (max-width: 470px) {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
   .small {
     width: 582px;
+    @media (max-width: 470px) {
+      width: 335px;
+      height: 30px;
+      border-radius: 5px;
+    }
+    h2 {
+      @media (max-width: 470px) {
+        font-size: 13px;
+        line-height: 18.54px;
+      }
+    }
+    i {
+      @media (max-width: 470px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.content {
+  @media (max-width: 470px) {
+    font-size: 12px;
   }
 }
 .round {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  @media (max-width: 470px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 0px;
+  }
 }

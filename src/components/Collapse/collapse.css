@@ -21,6 +21,11 @@
   margin-right: auto;
   z-index: 2;
 }
+@media (max-width: 470px) {
+  .collapse {
+    margin-top: 18px;
+  }
+}
 .collapse h2 {
   display: block;
 }

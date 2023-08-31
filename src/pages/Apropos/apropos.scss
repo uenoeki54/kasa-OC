@@ -1,0 +1,24 @@
+.conteneur-collapse {
+  @media (max-width: 470px) {
+    margin-bottom: 20px;
+  }
+}
+
+.big {
+  @media (max-width: 470px) {
+    width: 335px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  h2 {
+    @media (max-width: 470px) {
+      font-size: 13px;
+      line-height: 18.54px;
+    }
+  }
+  i {
+    @media (max-width: 470px) {
+      font-size: 15px;
+    }
+  }
+}

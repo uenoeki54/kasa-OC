@@ -2,13 +2,28 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 470px) {
+  .conteneur {
+    width: 100%;
+  }
+}
+
 .carousel {
   position: relative;
   width: 1240px;
   height: 415px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: white;
+}
+@media (max-width: 470px) {
+  .carousel {
+    width: 335px;
+    height: 255px;
+    margin: 0px auto 0px auto;
+    padding-bottom: 0px;
+  }
 }
 .carousel .banner-img {
   position: absolute;
@@ -23,6 +38,12 @@
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
+@media (max-width: 470px) {
+  .carousel .banner-img {
+    border-radius: 10px;
+    height: 255px;
+  }
+}
 .carousel p {
   position: absolute;
   top: 357.67px;
@@ -32,13 +53,29 @@
   font-size: 18px;
   line-height: 25.67px;
 }
+@media (max-width: 470px) {
+  .carousel p {
+    display: none;
+  }
+}
 .carousel i {
   font-size: 96px;
+}
+@media (max-width: 470px) {
+  .carousel i {
+    font-size: 20px;
+  }
 }
 .carousel .fa-chevron-left {
   position: absolute;
   top: 160px;
   left: 20px;
+}
+@media (max-width: 470px) {
+  .carousel .fa-chevron-left {
+    top: 117px;
+    left: 10px;
+  }
 }
 .carousel .fa-chevron-left:active ~ .banner-img {
   opacity: 0;
@@ -47,6 +84,12 @@
   position: absolute;
   top: 160px;
   right: 20px;
+}
+@media (max-width: 470px) {
+  .carousel .fa-chevron-right {
+    top: 117px;
+    right: 10px;
+  }
 }
 .carousel .fa-chevron-right:active ~ .banner-img {
   opacity: 0;

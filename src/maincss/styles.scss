@@ -6,10 +6,14 @@ $main-color: #ff6060;
 #root {
   width: 100%;
 }
+
+html {
+  height: fit-content;
+}
 //body
 body {
   margin: 0px;
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +80,8 @@ header {
     justify-content: flex-start;
     background-size: 600px;
     background-position: 50 % 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .banner-text {
     @media (max-width: 470px) {
@@ -103,7 +109,11 @@ header {
 }
 
 .banner-about {
-  background-image: url('../assets/banner-about.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../assets/banner-about.png');
+  @media (max-width: 470px) {
+    margin-bottom: 20px;
+  }
 }
 
 .conteneur {
@@ -127,16 +137,34 @@ header {
   margin-bottom: 10px;
   gap: 100px;
   padding-bottom: 100px;
+
+  @media (max-width: 470px) {
+    width: 335px;
+    font-size: 96px;
+    font-height: 136.9px;
+    margin-top: 90px;
+  }
   h1 {
     font-weight: 700;
     font-size: 288px;
     margin: 0px;
+    @media (max-width: 470px) {
+      font-size: 96px;
+      line-height: 136.9px;
+      margin-top: 20px;
+    }
   }
 
   h2 {
     font-weight: 500;
     font-size: 36px;
     line-height: 51.34px;
+    @media (max-width: 470px) {
+      font-size: 18px;
+      line-height: 25.67px;
+      margin: 0px;
+      width: 226px;
+    }
   }
   a {
     color: $main-color;
@@ -144,6 +172,10 @@ header {
     font-weight: 500;
     font-size: 18px;
     line-height: 25.67px;
+    @media (max-width: 470px) {
+      font-size: 14px;
+      font-height: 19.96px;
+    }
   }
 }
 
@@ -163,9 +195,11 @@ footer {
   line-height: 34.22px;
   gap: 20px;
   box-sizing: border-box;
-  margin-top: 10px;
+  margin-top: 50px;
   @media (max-width: 470px) {
     padding-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
   img {
     width: 122px;
