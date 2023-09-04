@@ -1,6 +1,6 @@
 @media (max-width: 470px) {
   .conteneur-collapse {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 }
 
@@ -21,4 +21,4 @@
   .big i {
     font-size: 15px;
   }
-}/*# sourceMappingURL=apropos.css.map */
+} /*# sourceMappingURL=apropos.css.map */
